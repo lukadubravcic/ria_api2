@@ -29,7 +29,7 @@ $app->get('/api/post/{param}', function ($param) {
     //'format' => "json"
 	));
 	
-	$result = $api->post("/api/post", array('naslov' => "nestooo"));
+	$result = $api->post("/api/post", array('naslov' => $param));
 	
 	/*if($result->info->http_code == 200)
 		var_dump($result->decode_response());*/
