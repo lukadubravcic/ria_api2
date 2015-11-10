@@ -5,7 +5,7 @@ use Phalcon\Mvc\Micro;
 
 $app = new Micro();
 
-$app->get('/say/{name}', function ($name) {
+$app->get('/api/posts', function ($name) {
     echo "<h1>Welcome $name!</h1>";
 	
 	$api = new RestClient(array(
@@ -13,8 +13,10 @@ $app->get('/say/{name}', function ($name) {
     'format' => "json"
 	));
 	
-	$result = $api->get("/api/posts", array('naslov' => "mirovanje"));
-	echo $result;
+	$result = $api->post("/api/posts", array('naslov' => "mirovanje"));
+	
+	echo $result->decode_response();
+	
 	
 });
 
