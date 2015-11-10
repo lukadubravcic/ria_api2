@@ -29,7 +29,7 @@ $app->get('/api/post/{param}', function ($param) {
     'format' => "json"
 	));
 	
-	$result = $api->post("/api/post/", array('naslov' => $param);
+	$result = $api->post("/api/post/", array('naslov' => $param));
 	
 	//echo json_encode($result->decode_response());
 	
