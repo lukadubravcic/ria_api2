@@ -26,10 +26,10 @@ $app->get('/api/post/{param}', function ($param) {
 	
 	$api = new RestClient(array(
     'base_url' => "tic984.riteh.hexis.hr", 
-    //'format' => "json"
+    'format' => "json"
 	));
 	
-	$result = $api->post("/api/post/" . $param);
+	$result = $api->post("/api/post/" . $params);
 	
 	echo json_encode($result->decode_response());
 	
