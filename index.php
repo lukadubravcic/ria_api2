@@ -18,13 +18,15 @@ $app->get('/api/posts', function () {
 	
 	$result = $api->get("/api/posts");
 	
+	echo json_encode($result->decode_response());
+	echo "<br />"
 	$obj = new display_entries;
 	$obj->displ(json_encode($result->decode_response()));
 	
 	
 	
 });
-
+/*
 $app->get('/api/post/{param}', function ($param) {
     //echo "<h1>Welcome!</h1>";
 	
@@ -42,6 +44,7 @@ $app->get('/api/post/{param}', function ($param) {
 	
 	
 });
+*/
 
 
 $app->handle();
