@@ -25,7 +25,7 @@ $app->get('/api/post/{param}', function ($param) {
     echo "<h1>Welcome!</h1>";
 	
 	$api = new RestClient(array(
-    'base_url' => "tic984.riteh.hexis.hr", 
+    'base_url' => "vinkovic.riteh.hexis.hr", 
     'format' => "json"
 	));
 	
