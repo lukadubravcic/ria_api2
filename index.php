@@ -13,7 +13,7 @@ $app->get('/api/posts', function ($name) {
     'format' => "json"
 	));
 	
-	$result = $api->get("/api/posts", array('' => ""));
+	$result = $api->get("/api/posts", array('name' => "test123"));
 	
 	echo $result->decode_response();
 	
