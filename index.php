@@ -1,6 +1,6 @@
 <?php
 
-include "restclient.php"
+include "restclient.php";
 use Phalcon\Mvc\Micro;
 
 $app = new Micro();
