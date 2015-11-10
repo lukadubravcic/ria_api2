@@ -15,7 +15,7 @@ $app->get('/api/posts', function () {
 	
 	$result = $api->get("/api/posts");
 	
-	echo $result->decode_response();
+	echo json_encode($result->decode_response());
 	
 	
 });
