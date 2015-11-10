@@ -13,7 +13,7 @@ $app->get('/api/posts', function ($name) {
     'format' => "json"
 	));
 	
-	$result = $api->post("/api/posts", array('naslov' => "mirovanje"));
+	$result = $api->get("/api/posts", array('' => ""));
 	
 	echo $result->decode_response();
 	
