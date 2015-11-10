@@ -5,8 +5,8 @@ use Phalcon\Mvc\Micro;
 
 $app = new Micro();
 
-$app->get('/api/posts', function ($name) {
-    echo "<h1>Welcome $name!</h1>";
+$app->get('/api/posts', function () {
+    echo "<h1>Welcome!</h1>";
 	
 	$api = new RestClient(array(
     'base_url' => "vinkovic.riteh.hexis.hr", 
