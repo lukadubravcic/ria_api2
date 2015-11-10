@@ -4,7 +4,7 @@ use Phalcon\Mvc\Micro;
 
 $app = new Micro();
 
-$app->get('{name}', function ($name) {
+$app->get('/say/{name}', function ($name) {
     echo "<h1>Welcome $name!</h1>";
 });
 
