@@ -1,7 +1,7 @@
 <?php
 
 include "restclient.php";
-use "display.php";
+include "display.php";
 use Phalcon\Mvc\Micro;
 
 
@@ -9,7 +9,7 @@ use Phalcon\Mvc\Micro;
 $app = new Micro();
 
 $app->get('/api/posts', function () {
-    echo "<h1>Welcome!</h1>";
+    
 	
 	$api = new RestClient(array(
     'base_url' => "vinkovic.riteh.hexis.hr", 
@@ -22,9 +22,6 @@ $app->get('/api/posts', function () {
 	echo "<br />"
 	$obj = new display_entries;
 	$obj->displ(json_encode($result->decode_response()));
-	
-	
-	
 });
 /*
 $app->get('/api/post/{param}', function ($param) {
