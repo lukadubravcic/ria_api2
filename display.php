@@ -2,7 +2,7 @@
 
 class display_entries
 {
-	public funtion displ($json_array)
+	public function displ($json_array)
 	{
 		echo "<table>";
 		foreach ($json_array as $k=>$v){
