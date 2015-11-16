@@ -18,14 +18,14 @@ $app->get('/api/posts', function () {
 	$result = $api->get("/api/posts");
 	$decoded = $result->decode_response();
 	
-	//echo json_encode($result->decode_response());
-	//echo "<br />";
-	echo "<table>";
+	displ($decoded);
+
+	/*echo "<table>";
 	echo "<tr><td>ID</td> <td>NASLOV</td> <td>DATE</td></tr>";
 	foreach($decoded as $item) {
 		echo "<tr><td>$item->id</td><td>$item->naslov</td><td>$item->datum</td></tr>";
 	}
-	echo "</table";
+	echo "</table";*/
 });
 /*
 $app->get('/api/post/{param}', function ($param) {
