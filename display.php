@@ -1,7 +1,7 @@
 <?php
 
 
-public function displ($json_array)
+function displ($json_array)
 {
 	
 	echo $json_array;
