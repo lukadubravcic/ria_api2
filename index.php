@@ -21,8 +21,12 @@ $app->get('/api/posts', function () {
 	
 	//echo json_encode($result->decode_response());
 	//echo "<br />";
-	
-	displ($decoded);
+	echo "<table>";
+	echo "<tr><td>ID</td> <td>NASLOV</td> <td>DATE</td></tr>";
+	foreach ($json_array as $item){
+		echo "<tr><td>",$item->id,"</td><td>",$item->naslov,"</td><td>",$item->datum,"</td></tr>";
+	}
+	echo "</table";
 });
 /*
 $app->get('/api/post/{param}', function ($param) {
