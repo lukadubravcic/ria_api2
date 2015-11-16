@@ -12,8 +12,7 @@ $app->get('/api/posts', function () {
     
 	
 	$api = new RestClient(array(
-    'base_url' => "vinkovic.riteh.hexis.hr", 
-    'format' => "json"
+    'base_url' => "vinkovic.riteh.hexis.hr"
 	));
 	
 	$result = $api->get("/api/posts");
