@@ -21,8 +21,8 @@ $app->get('/api/posts', function () {
 	
 	//echo json_encode($result->decode_response());
 	//echo "<br />";
-	$obj = new display_entries;
-	$obj->displ($decoded);
+	
+	displ($decoded);
 });
 /*
 $app->get('/api/post/{param}', function ($param) {
