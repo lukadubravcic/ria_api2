@@ -23,7 +23,7 @@ $app->get('/api/posts', function () {
 	//echo "<br />";
 	echo "<table>";
 	echo "<tr><td>ID</td> <td>NASLOV</td> <td>DATE</td></tr>";
-	foreach ($json_array as $item){
+	foreach ($decoded as $item){
 		echo "<tr><td>",$item->id,"</td><td>",$item->naslov,"</td><td>",$item->datum,"</td></tr>";
 	}
 	echo "</table";
